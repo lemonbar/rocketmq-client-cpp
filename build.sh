@@ -28,7 +28,7 @@ fname_jsoncpp="jsoncpp*.zip"
 fname_boost="boost*.tar.gz"
 fname_libevent_down="release-2.1.11-stable.zip"
 fname_jsoncpp_down="0.10.6.zip"
-fname_boost_down="1.58.0/boost_1_58_0.tar.gz"
+fname_boost_down="1.70.0/boost_1_70_0.tar.gz"
 
 PrintParams() {
   echo "=========================================one key build help============================================"
