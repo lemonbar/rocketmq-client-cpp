@@ -50,7 +50,7 @@ set(Boost_USE_MULTITHREADED ON)
 set(Boost_USE_STATIC_RUNTIME ON)
 if (WIN32)
     find_package(Boost 1.56 REQUIRED COMPONENTS atomic thread system chrono date_time
-            log log_setup regex serialization filesystem locale iostreams zlib)
+            log log_setup regex serialization filesystem locale iostreams program_options zlib)
     if (Boost_FOUND)
         message(STATUS "** Boost Include dir: ${Boost_INCLUDE_DIR}")
         message(STATUS "** Boost Libraries dir: ${Boost_LIBRARY_DIRS}")
@@ -64,7 +64,7 @@ else ()
     set(Boost_LIBRARIES ${Boost_LIBRARY_DIRS}/libboost_atomic.a;${Boost_LIBRARY_DIRS}/libboost_thread.a;${Boost_LIBRARY_DIRS}/libboost_system.a;${Boost_LIBRARY_DIRS}/libboost_chrono.a;
             ${Boost_LIBRARY_DIRS}/libboost_date_time.a;${Boost_LIBRARY_DIRS}/libboost_log.a;${Boost_LIBRARY_DIRS}/libboost_log_setup.a;
             ${Boost_LIBRARY_DIRS}/libboost_regex.a;${Boost_LIBRARY_DIRS}/libboost_serialization.a;${Boost_LIBRARY_DIRS}/libboost_filesystem.a;
-            ${Boost_LIBRARY_DIRS}/libboost_locale.a;${Boost_LIBRARY_DIRS}/libboost_iostreams.a)
+            ${Boost_LIBRARY_DIRS}/libboost_locale.a;${Boost_LIBRARY_DIRS}/libboost_iostreams.a;${Boost_LIBRARY_DIRS}/libboost_program_options.a)
     include_directories(${Boost_INCLUDE_DIRS})
 endif ()
 
